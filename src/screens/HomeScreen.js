@@ -721,7 +721,7 @@ export default function HomeScreen() {
           <Text style={styles.greetingText}>Hello, User!</Text>
         </View>
 
-        <View style={styles.titleContainer}>
+        <View style={styles.titleContainer} testID="titleContainer">
           <Text style={styles.title}>Make your own food,</Text>
           <Text style={styles.subtitle}>
             stay at <Text style={styles.highlight}>home</Text>
@@ -729,11 +729,15 @@ export default function HomeScreen() {
         </View>
 
         <View testID="categoryList">
-       
+          <Categories
+            categories={categories}
+            activeCategory={activeCategory}
+            handleChangeCategory={handleChangeCategory}
+          />
         </View>
 
         <View testID="foodList">
-
+          <FoodItems foods={filteredfoods} />
           </View>
       </ScrollView>
     </View>
