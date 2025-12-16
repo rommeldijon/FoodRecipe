@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux"; // Redux hooks
 import { toggleFavorite } from "../redux/favoritesSlice"; // Redux action
 
 export default function RecipeDetailScreen(props) {
-  const recipe = props.route.params // recipe passed from previous screen
+  const recipe = props.route.params.recipe// recipe passed from previous screen
 
   const dispatch = useDispatch();
   const favoriterecipes = useSelector(
